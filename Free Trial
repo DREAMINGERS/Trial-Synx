@@ -1,0 +1,30 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/cat"))() --you can go into the github link and copy all of it and modify it for yourself.
+local Window = Library:CreateWindow("Synapse X Hub Update", Vector2.new(492, 598), Enum.KeyCode.RightControl) --you can change your UI keybind
+local AimingTab = Window:CreateTab("Main") --you can rename this tab to whatever you want --you can also change the tabs code, for example "AimingTab" can be changed to "FunnyCoolTab" etc.
+
+
+local testSection = AimingTab:CreateSector("Script Free Exploit", "T")  --you can  change the section code, for example "testsection" can be changed to "FunnyCoolSection" etc.
+
+testSection:AddButton("Inf Yield", function(ClientLol)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+testSection:AddButton("CMDX", function(ClientLol)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+testSection:AddButton("Domain", function(ClientLol)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+end)
+
+testSection:AddButton("SolarisHub", function(ClientLol)
+    loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
+end)
+
+testSection:AddButton("Orca", function(ClientLol)
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+end)
+
+testSection:AddButton("Dark Dex", function(ClientLol)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
