@@ -1,30 +1,76 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/cat"))() --you can go into the github link and copy all of it and modify it for yourself.
-local Window = Library:CreateWindow("Synapse X Hub Update", Vector2.new(492, 598), Enum.KeyCode.RightControl) --you can change your UI keybind
-local AimingTab = Window:CreateTab("Main") --you can rename this tab to whatever you want --you can also change the tabs code, for example "AimingTab" can be changed to "FunnyCoolTab" etc.
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vozoid/ui-libraries/main/drawing/void/source.lua"))()
 
+local watermark = library:Watermark("watermark | 60 fps | v5.1426 | dev")
+-- watermark:Set("Watermark Set")
+-- watermark:Hide() -- toggles watermark
 
-local testSection = AimingTab:CreateSector("Script Free Exploit", "T")  --you can  change the section code, for example "testsection" can be changed to "FunnyCoolSection" etc.
+local main = library:Load{
+    Name = "Synapse x Hub V5",
+    SizeX = 600,
+    SizeY = 650,
+    Theme = "Midnight",
+    Extension = "json", -- config file extension
+    Folder = "vozoid ui or something" -- config folder name
+}
 
-testSection:AddButton("Inf Yield", function(ClientLol)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
+-- library.Extension = "Synx Hub Update" (config file extension)
+-- library.Folder = "config folder name"
 
-testSection:AddButton("CMDX", function(ClientLol)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
-end)
+local tab = main:Tab("Script Free Exploit")
 
-testSection:AddButton("Domain", function(ClientLol)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
-end)
+local section = tab:Section{
+    Name = "Free script",
+    Side = "Left"
+}
 
-testSection:AddButton("SolarisHub", function(ClientLol)
-    loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
-end)
+local label = section:Label("Label")
 
-testSection:AddButton("Orca", function(ClientLol)
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
-end)
+--label:Set("Label Set")
 
-testSection:AddButton("Dark Dex", function(ClientLol)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
-end)
+local label = section:Label("Label")
+
+--label:Set("Script Free exploit")
+
+section:Button{
+    Name = "Inf yield",
+    Callback  = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+}
+
+section:Button{
+    Name = "CmdX",
+    Callback  = function()
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+    end
+}
+
+section:Button{
+    Name = "Domain",
+    Callback  = function()
+             loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+    end
+}
+
+section:Button{
+    Name = "Solaris Hub",
+    Callback  = function()
+             loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
+    end
+}
+
+section:Button{
+    Name = "Orca",
+    Callback  = function()
+             loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+
+    end
+}
+
+section:Button{
+    Name = "Dark Dex",
+    Callback  = function()             
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua",true))()
+
+    end
+}
